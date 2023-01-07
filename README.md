@@ -1,10 +1,11 @@
+Create a repo in aws ECR name - > django-app
+
+
 aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 600735812827.dkr.ecr.us-west-1.amazonaws.com
 
 
 cd app/
 
-
-Create a repo in aws ECR name - > django-app
 
 
 docker build -t 600735812827.dkr.ecr.us-west-1.amazonaws.com/django-app:latest . 
@@ -14,6 +15,8 @@ docker push 600735812827.dkr.ecr.us-west-1.amazonaws.com/django-app:latest
 
 
 Change the file paths in iam.tf and variables.tf file
+
+Go to terraform folder and hit this below command 
 
 ssh-keygen -f california-region-key-pair
 
