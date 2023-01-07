@@ -1,11 +1,12 @@
 Create a repo in aws ECR name - > django-app
 
+IMPORTANT - Once the repo is create change the 600735812827.dkr.ecr.us-west-1.amazonaws.com BELOW VALUES IN COMMANDS TO THE REPO OF YOURS
+
 
 aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 600735812827.dkr.ecr.us-west-1.amazonaws.com
 
 
 cd app/
-
 
 
 docker build -t 600735812827.dkr.ecr.us-west-1.amazonaws.com/django-app:latest . 
