@@ -49,7 +49,9 @@ export AWS_SECRET_ACCESS_KEY=""
 export AWS_DEFAULT_REGION="us-west-1" 
 
 
-python3 update-ecs.py --cluster=production-cluster --service=production-service
+cd deploy folder 
+
+Run command in deploy folder - python3 update-ecs.py --cluster=production-cluster --service=production-service
 
 
 terraform destroy
