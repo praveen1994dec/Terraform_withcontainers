@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.9.0-slim-buster
+FROM --platform=linux/amd64 python:3.9.0-slim-buster
 
 
 #FROM python:3.8.6-slim
