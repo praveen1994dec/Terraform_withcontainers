@@ -10,10 +10,12 @@ IMPORTANT - Once the repo is create change the 600735812827.dkr.ecr.us-west-1.am
 
 4) cd app/
 
-5) docker build -t <YOUR ECR REPO URL>/django-app:latest . 
+5) docker build -t <YOUR ECR REPO URL>/django-app:latest .
+
+6) docker build --platform=linux/amd64 -t 240910715551.dkr.ecr.us-west-1.amazonaws.com/django-app:latest .
 
 
-6)docker push <YOUR ECR REPO URL>/django-app:latest
+6)docker push 240910715551.dkr.ecr.us-west-1.amazonaws.com/django-app:latest
 
 7) Go to terraform folder and hit this below command 
 
