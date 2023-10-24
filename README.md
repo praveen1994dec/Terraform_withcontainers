@@ -22,6 +22,14 @@ IMPORTANT - Once the repo is create change the 600735812827.dkr.ecr.us-west-1.am
 ssh-keygen -f california-region-key-pair
 
 
+
+[NOTE] If you're using Apple Silicon chip (ie mac m1 or m2) then,
+Follow these 3 below commands before 'terraform init' command 
+
+1) brew install kreuzwerker/taps/m1-terraform-provider-helper
+2) m1-terraform-provider-helper activate
+3) m1-terraform-provider-helper install hashicorp/template -v v2.2.0
+
 terraform init 
 
 
