@@ -4,6 +4,9 @@ resource "aws_autoscaling_group" "ecs-cluster" {
   max_size             = "${var.autoscale_max}"
   desired_capacity     = "${var.autoscale_desired}"
   health_check_type    = "EC2"
-  launch_configuration = aws_launch_configuration.ecs.name
+   launch_template {
+    id      = aws_launch_template.ecs.id
+    version = "$Latest"
+  }
   vpc_zone_identifier  = [aws_subnet.public-subnet-1.id, aws_subnet.public-subnet-2.id]
 }

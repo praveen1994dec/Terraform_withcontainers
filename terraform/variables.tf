@@ -5,6 +5,7 @@ variable "region" {
   default     = "us-west-1"
 }
 
+variable "subnet_ids" { type = list(string) }
 
 # networking
 
@@ -27,7 +28,7 @@ variable "private_subnet_2_cidr" {
 variable "availability_zones" {
   description = "Availability zones"
   type        = list(string)
-  default     = ["us-west-1b", "us-west-1c"]
+  default     = ["us-west-1a", "us-west-1b"]
 }
 
 
@@ -67,7 +68,7 @@ variable "log_retention_in_days" {
 
 variable "ssh_pubkey_file" {
   description = "Path to an SSH public key"
-  default     = "/Users/praveensingampalli/Documents/BOOTCAMP2_FINAL/Terraform_withcontainers/terraform/california-region-key-pair.pub"
+  default     = "/Users/praveensingampalli/Documents/BATCH13_TERRAFORM/Terraform_withcontainers/app/california-region-key-pair.pub"
 }
 
 
@@ -89,9 +90,14 @@ variable "instance_type" {
 }
 variable "docker_image_url_django" {
   description = "Docker image to run in the ECS cluster"
-  default     = "600735812827.dkr.ecr.us-west-1.amazonaws.com/django-app:latest"
+  default     = "710417924509.dkr.ecr.us-west-1.amazonaws.com/django-app"
 }
 variable "app_count" {
   description = "Number of Docker containers to run"
   default     = 2
 }
+
+
+variable "max_size" {}
+variable "min_size" {}
+variable "desired_capacity" {}
